@@ -7,10 +7,10 @@ except Exception:
     sys.exit()
 
 
-# Sample User model
-class User(models.Model):
-    name = models.CharField(max_length=50, default="Dan")
-
-    def __str__(self):
-        return self.name
-
+class Register(models.Model):
+    ism = models.CharField(max_length=200)
+    familya = models.CharField(max_length=200)
+    telefon_nomer = models.CharField(max_length=200)
+    kurs = models.CharField(max_length=200)
+    vaqt = models.CharField(max_length=200)
+    registratsiya_vaqti = models.DateField(auto_now_add=True, blank=True, null=True)
